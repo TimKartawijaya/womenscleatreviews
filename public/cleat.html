@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Product</title>
+	<title>Cleats Catalog</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--===============================================================================================-->
@@ -32,108 +32,8 @@
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
 	<!--===============================================================================================-->
-	<style>
-		.active1 {
-			color: #333333;
-			font-weight: bolder;
-		}
-		.control-group {
-			display: inline-block;
-			width: 200px;
-			height: 210px;
-			margin: 10px;
-			padding: 30px;
-			text-align: left;
-			vertical-align: top;
-			background: #fff;
-			box-shadow: 0 1px 2px rgba(0,0,0,.1);
-		}
-		.control {
-			font-size: 15.5px;
-			position: relative;
-			display: block;
-			margin-bottom: 0px;
-			padding-left: 27px;
-			cursor: pointer;
-		}
-
-		.control input {
-			position: absolute;
-			z-index: -1;
-			opacity: 0;
-		}
-
-		.control__indicator {
-			position: absolute;
-			top: 2px;
-			left: 0;
-			width: 20px;
-			height: 20px;
-			background: #e6e6e6;
-		}
-
-		.control--radio .control__indicator {
-			border-radius: 50%;
-		}
-
-				/* Hover and focus states */
-		.control:hover input ~ .control__indicator,
-		.control input:focus ~ .control__indicator {
-			background: #ccc;
-		}
-
-		/* Checked state */
-		.control input:checked ~ .control__indicator {
-			background: #333333;
-		}
-
-		/* Hover state whilst checked */
-		.control:hover input:not([disabled]):checked ~ .control__indicator,
-		.control input:checked:focus ~ .control__indicator {
-			background: #333333;
-		}
-
-		/* Disabled state */
-		.control input:disabled ~ .control__indicator {
-			pointer-events: none;
-			opacity: .6;
-			background: #e6e6e6;
-		}
-
-		/* Check mark */
-		.control__indicator:after {
-			position: absolute;
-			display: none;
-			content: '';
-		}
-
-		/* Show check mark */
-		.control input:checked ~ .control__indicator:after {
-			display: block;
-		}
-
-		/* Checkbox tick */
-		.control--checkbox .control__indicator:after {
-			top: 2px;
-			left: 7.5px;
-			width: 5px;
-			height: 12.5px;
-			transform: rotate(45deg);
-			border: solid #fff;
-			border-width: 0 2px 2px 0;
-		}
-
-		/* Disabled tick colour */
-		.control--checkbox input:disabled ~ .control__indicator:after {
-			border-color: #7b7b7b;
-		}
-
-		/* Disabled circle colour */
-		.control--radio input:disabled ~ .control__indicator:after {
-			background: #7b7b7b;
-		}
-	</style>
 </head>
 
 <body class="animsition">
@@ -160,10 +60,13 @@
 							<li>
 								<a href="about.html">About</a>
 							</li>
-
 							<li>
-								<a href="cleat.html">Cleats</a>
+									<a href="cleat.html" class="active1">Cleats</a>
 							</li>
+							<li>
+								<a href="guide.html">Guide</a>
+							</li>
+
 
 							<li>
 								<a href="contact.html">Contact</a>
@@ -205,15 +108,19 @@
 					</li>
 
 					<li class="item-menu-mobile">
-						<a href="product.html">About</a>
+						<a href="about.html">About</a>
 					</li>
 
 					<li class="item-menu-mobile">
-						<a href="cart.html">Cleats</a>
+						<a href="cleat.html">Cleats</a>
 					</li>
 
 					<li class="item-menu-mobile">
-						<a href="blog.html">Contact</a>
+						<a href="guide.html">Guide</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="contact.html">Contact</a>
 					</li>
 				</ul>
 			</nav>
@@ -228,9 +135,6 @@
 		<h2 class="l-text2 t-center">
 			Cleats Catalog
 		</h2>
-		<p class="m-text13 t-center">
-			New Arrivals Women Collection 2018
-		</p>
 	</section>
 
 
@@ -254,12 +158,6 @@
 							</div>
 
 							<div class="flex-sb-m flex-w p-t-16">
-								<div class="w-size11">
-									<!-- Button -->
-									<button class="flex-c-m size4 bg7 bo-rad-15 hov1 s-text14 trans-0-4">
-										Filter
-									</button>
-								</div>
 
 								<div class="s-text3 p-t-10 p-b-10">
 									Range: $
@@ -276,38 +174,38 @@
 
 						<ul class="p-b-54 bo3">
 							<li class="p-t-6">
-								<label class="control control--checkbox active1">Artificial Ground
-									  <input type="checkbox"/>
-									  <div class="control__indicator"></div>
+								<label class="control control--checkbox ">Artificial Ground
+									<input type="checkbox" />
+									<div class="control__indicator"></div>
 								</label>
 							</li>
-							
+
 							<li class="p-t-6">
-									<label class="control control--checkbox active1">Firm Ground
-										  <input type="checkbox"/>
-										  <div class="control__indicator"></div>
-									</label>
+								<label class="control control--checkbox ">Firm Ground
+									<input type="checkbox" />
+									<div class="control__indicator"></div>
+								</label>
 							</li>
 
 							<li class="p-t-6">
-									<label class="control control--checkbox active1">Indoor
-										  <input type="checkbox"/>
-										  <div class="control__indicator"></div>
-									</label>
+								<label class="control control--checkbox ">Indoor
+									<input type="checkbox" />
+									<div class="control__indicator"></div>
+								</label>
 							</li>
 
 							<li class="p-t-6">
-									<label class="control control--checkbox active1">Soft Ground
-										  <input type="checkbox" />
-										  <div class="control__indicator"></div>
-									</label>
+								<label class="control control--checkbox ">Soft Ground
+									<input type="checkbox" />
+									<div class="control__indicator"></div>
+								</label>
 							</li>
 
 							<li class="p-t-6">
-									<label class="control control--checkbox active1">Turf
-										  <input type="checkbox"/>
-										  <div class="control__indicator"></div>
-									</label>
+								<label class="control control--checkbox ">Turf
+									<input type="checkbox" />
+									<div class="control__indicator"></div>
+								</label>
 							</li>
 
 						</ul>
@@ -318,19 +216,19 @@
 						</h4>
 
 						<ul class="p-b-54 bo3">
-								<li class="p-t-6">
-										<label class="control control--checkbox active1">Adidas
-											  <input type="checkbox"/>
-											  <div class="control__indicator"></div>
-										</label>
-								</li>
+							<li class="p-t-6">
+								<label class="control control--checkbox ">Adidas
+									<input type="checkbox" />
+									<div class="control__indicator"></div>
+								</label>
+							</li>
 
-								<li class="p-t-6">
-										<label class="control control--checkbox active1">Nike
-											  <input type="checkbox"/>
-											  <div class="control__indicator"></div>
-										</label>
-								</li>
+							<li class="p-t-6">
+								<label class="control control--checkbox ">Nike
+									<input type="checkbox" />
+									<div class="control__indicator"></div>
+								</label>
+							</li>
 						</ul>
 						<!-- Athlete -->
 						<h4 class="m-text14 p-b-7">
@@ -339,19 +237,19 @@
 
 						<ul class="p-b-54 bo3">
 
-								<li class="p-t-6">
-										<label class="control control--checkbox active1">Christiano Ronaldo
-											  <input type="checkbox"/>
-											  <div class="control__indicator"></div>
-										</label>
-								</li>
+							<li class="p-t-6">
+								<label class="control control--checkbox">Christiano Ronaldo
+									<input type="checkbox" />
+									<div class="control__indicator"></div>
+								</label>
+							</li>
 
-								<li class="p-t-6">
-										<label class="control control--checkbox active1">Neymar
-											  <input type="checkbox"/>
-											  <div class="control__indicator"></div>
-										</label>
-								</li>
+							<li class="p-t-6">
+								<label class="control control--checkbox">Neymar
+									<input type="checkbox" />
+									<div class="control__indicator"></div>
+								</label>
+							</li>
 						</ul>
 
 						<div class="filter-color p-t-22 p-b-50 bo3">
