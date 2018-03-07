@@ -1,41 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title>Product</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.png" />
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/themify/themify-icons.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/elegant-font/html-css/style.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/noui/nouislider.min.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
+	<style>
+		.active1 {
+			color: #333333;
+			font-weight: bolder;
+		}
+		.control-group {
+			display: inline-block;
+			width: 200px;
+			height: 210px;
+			margin: 10px;
+			padding: 30px;
+			text-align: left;
+			vertical-align: top;
+			background: #fff;
+			box-shadow: 0 1px 2px rgba(0,0,0,.1);
+		}
+		.control {
+			font-size: 15.5px;
+			position: relative;
+			display: block;
+			margin-bottom: 0px;
+			padding-left: 27px;
+			cursor: pointer;
+		}
+
+		.control input {
+			position: absolute;
+			z-index: -1;
+			opacity: 0;
+		}
+
+		.control__indicator {
+			position: absolute;
+			top: 2px;
+			left: 0;
+			width: 20px;
+			height: 20px;
+			background: #e6e6e6;
+		}
+
+		.control--radio .control__indicator {
+			border-radius: 50%;
+		}
+
+				/* Hover and focus states */
+		.control:hover input ~ .control__indicator,
+		.control input:focus ~ .control__indicator {
+			background: #ccc;
+		}
+
+		/* Checked state */
+		.control input:checked ~ .control__indicator {
+			background: #333333;
+		}
+
+		/* Hover state whilst checked */
+		.control:hover input:not([disabled]):checked ~ .control__indicator,
+		.control input:checked:focus ~ .control__indicator {
+			background: #333333;
+		}
+
+		/* Disabled state */
+		.control input:disabled ~ .control__indicator {
+			pointer-events: none;
+			opacity: .6;
+			background: #e6e6e6;
+		}
+
+		/* Check mark */
+		.control__indicator:after {
+			position: absolute;
+			display: none;
+			content: '';
+		}
+
+		/* Show check mark */
+		.control input:checked ~ .control__indicator:after {
+			display: block;
+		}
+
+		/* Checkbox tick */
+		.control--checkbox .control__indicator:after {
+			top: 2px;
+			left: 7.5px;
+			width: 5px;
+			height: 12.5px;
+			transform: rotate(45deg);
+			border: solid #fff;
+			border-width: 0 2px 2px 0;
+		}
+
+		/* Disabled tick colour */
+		.control--checkbox input:disabled ~ .control__indicator:after {
+			border-color: #7b7b7b;
+		}
+
+		/* Disabled circle colour */
+		.control--radio input:disabled ~ .control__indicator:after {
+			background: #7b7b7b;
+		}
+	</style>
 </head>
+
 <body class="animsition">
 
-	
+
 	<!-- Header -->
 	<header class="header1">
 		<!-- Header desktop -->
@@ -56,9 +159,9 @@
 
 							<li>
 								<a href="about.html">About</a>
-                            </li>
-                            
-                            <li>
+							</li>
+
+							<li>
 								<a href="cleat.html">Cleats</a>
 							</li>
 
@@ -66,12 +169,12 @@
 								<a href="contact.html">Contact</a>
 							</li>
 
-					
+
 						</ul>
 					</nav>
 				</div>
 
-				
+
 			</div>
 		</div>
 
@@ -94,7 +197,7 @@
 		</div>
 
 		<!-- Menu Mobile -->
-		<div class="wrap-side-menu" >
+		<div class="wrap-side-menu">
 			<nav class="side-menu">
 				<ul class="main-menu">
 					<li class="item-menu-mobile">
@@ -136,53 +239,15 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
-					<div class="leftbar p-r-20 p-r-0-sm">
-						<!--  -->
+					<div class="leftbar p-r-20 p-r-0-sm sidebar-filter">
+						<!-- Filter Bar -->
+
+						<!-- Price -->
 						<h4 class="m-text14 p-b-7">
-							Categories
-						</h4>
-
-						<ul class="p-b-54">
-							<li class="p-t-4">
-								<a href="#" class="s-text13 active1">
-									All
-								</a>
-							</li>
-
-							<li class="p-t-4">
-								<a href="#" class="s-text13">
-									Women
-								</a>
-							</li>
-
-							<li class="p-t-4">
-								<a href="#" class="s-text13">
-									Men
-								</a>
-							</li>
-
-							<li class="p-t-4">
-								<a href="#" class="s-text13">
-									Kids
-								</a>
-							</li>
-
-							<li class="p-t-4">
-								<a href="#" class="s-text13">
-									Accesories
-								</a>
-							</li>
-						</ul>
-
-						<!--  -->
-						<h4 class="m-text14 p-b-32">
-							Filters
+							Price
 						</h4>
 
 						<div class="filter-price p-t-22 p-b-50 bo3">
-							<div class="m-text15 p-b-17">
-								Price
-							</div>
 
 							<div class="wra-filter-bar">
 								<div id="filter-bar"></div>
@@ -197,10 +262,97 @@
 								</div>
 
 								<div class="s-text3 p-t-10 p-b-10">
-									Range: $<span id="value-lower">610</span> - $<span id="value-upper">980</span>
+									Range: $
+									<span id="value-lower">0</span> - $
+									<span id="value-upper">200</span>
 								</div>
 							</div>
 						</div>
+
+						<!-- Surface -->
+						<h4 class="m-text14 p-b-7">
+							Surface
+						</h4>
+
+						<ul class="p-b-54 bo3">
+							<li class="p-t-6">
+								<label class="control control--checkbox active1">Artificial Ground
+									  <input type="checkbox"/>
+									  <div class="control__indicator"></div>
+								</label>
+							</li>
+							
+							<li class="p-t-6">
+									<label class="control control--checkbox active1">Firm Ground
+										  <input type="checkbox"/>
+										  <div class="control__indicator"></div>
+									</label>
+							</li>
+
+							<li class="p-t-6">
+									<label class="control control--checkbox active1">Indoor
+										  <input type="checkbox"/>
+										  <div class="control__indicator"></div>
+									</label>
+							</li>
+
+							<li class="p-t-6">
+									<label class="control control--checkbox active1">Soft Ground
+										  <input type="checkbox" />
+										  <div class="control__indicator"></div>
+									</label>
+							</li>
+
+							<li class="p-t-6">
+									<label class="control control--checkbox active1">Turf
+										  <input type="checkbox"/>
+										  <div class="control__indicator"></div>
+									</label>
+							</li>
+
+						</ul>
+
+						<!-- Brand -->
+						<h4 class="m-text14 p-b-7">
+							Brand
+						</h4>
+
+						<ul class="p-b-54 bo3">
+								<li class="p-t-6">
+										<label class="control control--checkbox active1">Adidas
+											  <input type="checkbox"/>
+											  <div class="control__indicator"></div>
+										</label>
+								</li>
+
+								<li class="p-t-6">
+										<label class="control control--checkbox active1">Nike
+											  <input type="checkbox"/>
+											  <div class="control__indicator"></div>
+										</label>
+								</li>
+						</ul>
+						<!-- Athlete -->
+						<h4 class="m-text14 p-b-7">
+							Athlete
+						</h4>
+
+						<ul class="p-b-54 bo3">
+
+								<li class="p-t-6">
+										<label class="control control--checkbox active1">Christiano Ronaldo
+											  <input type="checkbox"/>
+											  <div class="control__indicator"></div>
+										</label>
+								</li>
+
+								<li class="p-t-6">
+										<label class="control control--checkbox active1">Neymar
+											  <input type="checkbox"/>
+											  <div class="control__indicator"></div>
+										</label>
+								</li>
+						</ul>
 
 						<div class="filter-color p-t-22 p-b-50 bo3">
 							<div class="m-text15 p-b-12">
@@ -746,12 +898,13 @@
 					</div>
 
 				</form>
-            </div>
-            <div class="t-center p-l-15 p-r-15">
-                <div class="t-center s-text8 p-t-20">
-                    Copyright © 2018. All rights reserved. | Template Design by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                </div>
-            </div>
+			</div>
+			<div class="t-center p-l-15 p-r-15">
+				<div class="t-center s-text8 p-t-20">
+					Copyright © 2018. All rights reserved. | Template Design by
+					<a href="https://colorlib.com" target="_blank">Colorlib</a>
+				</div>
+			</div>
 		</div>
 
 	</footer>
@@ -771,14 +924,14 @@
 
 
 
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/bootstrap/js/popper.js"></script>
 	<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/select2/select2.min.js"></script>
 	<script type="text/javascript">
 		$(".selection-1").select2({
@@ -791,57 +944,58 @@
 			dropdownParent: $('#dropDownSelect2')
 		});
 	</script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/daterangepicker/moment.min.js"></script>
 	<script type="text/javascript" src="vendor/daterangepicker/daterangepicker.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
 	<script type="text/javascript" src="js/slick-custom.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/sweetalert/sweetalert.min.js"></script>
 	<script type="text/javascript">
-		$('.block2-btn-addcart').each(function(){
+		$('.block2-btn-addcart').each(function () {
 			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
-			$(this).on('click', function(){
+			$(this).on('click', function () {
 				swal(nameProduct, "is added to cart !", "success");
 			});
 		});
 
-		$('.block2-btn-addwishlist').each(function(){
+		$('.block2-btn-addwishlist').each(function () {
 			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
-			$(this).on('click', function(){
+			$(this).on('click', function () {
 				swal(nameProduct, "is added to wishlist !", "success");
 			});
 		});
 	</script>
 
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/noui/nouislider.min.js"></script>
 	<script type="text/javascript">
 		/*[ No ui ]
 	    ===========================================================*/
-	    var filterBar = document.getElementById('filter-bar');
+		var filterBar = document.getElementById('filter-bar');
 
-	    noUiSlider.create(filterBar, {
-	        start: [ 50, 200 ],
-	        connect: true,
-	        range: {
-	            'min': 50,
-	            'max': 200
-	        }
-	    });
+		noUiSlider.create(filterBar, {
+			start: [0, 200],
+			connect: true,
+			range: {
+				'min': 0,
+				'max': 200
+			}
+		});
 
-	    var skipValues = [
-	    document.getElementById('value-lower'),
-	    document.getElementById('value-upper')
-	    ];
+		var skipValues = [
+			document.getElementById('value-lower'),
+			document.getElementById('value-upper')
+		];
 
-	    filterBar.noUiSlider.on('update', function( values, handle ) {
-	        skipValues[handle].innerHTML = Math.round(values[handle]) ;
-	    });
+		filterBar.noUiSlider.on('update', function (values, handle) {
+			skipValues[handle].innerHTML = Math.round(values[handle]);
+		});
 	</script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script src="js/main.js"></script>
 
 </body>
+
 </html>

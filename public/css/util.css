@@ -3998,10 +3998,9 @@ EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
 ///////////////////////////////////////////////////////////
 */
 .active1 {
-	color: #333333;
+	color: #e65440;
+	font-weight: bolder;
 }
-
-
 
 /*[ Parallax ]
 ///////////////////////////////////////////////////////////
