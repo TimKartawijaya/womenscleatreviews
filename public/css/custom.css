@@ -1,16 +1,11 @@
 .active1.active1{
     color: #e65440;
-	font-weight: bolder;
+    font-weight: bold;
 }
 
 .active2.active2{
     color: #333333;
-	font-weight: bolder;
-}
-
-.active1 {
-    color: #333333;
-    font-weight: bolder;
+	font-weight: 900;
 }
 
 .control-group {
@@ -118,3 +113,51 @@
 .control--radio input:disabled~.control__indicator:after {
     background: #7b7b7b;
 }
+
+.bg-about-page {
+    width: 100%;
+    min-height: 600px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: cover;
+}
+
+.bg-home-start {
+    width: 100%;
+    min-height: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: cover;
+    
+}
+
+.newsletter-email {
+    width: 50%;
+    height: 50px;
+}
+
+.bg-newsletter {
+    background: rgb(226, 4, 4);
+    width: 100%;
+    min-height: 225px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: cover;
+    
+}
+
+
+.about-numbers{
+    color: #17a2b8;
+}
+
+.citation{
+    color:blue;
+}
+
