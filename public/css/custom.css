@@ -129,7 +129,7 @@
     min-height: 100px;
     padding-left: 15px;
     padding-right: 15px;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;s
     background-position: center 0;
     background-size: cover;
     
@@ -161,3 +161,28 @@
     color:blue;
 }
 
+.wrapper {
+    /* margin: 100px auto; */
+    text-align: center;
+    font-size: 36px;
+}
+
+.wrapper div {
+    /* margin-bottom: 30px; */
+}
+  
+.fa {
+    position: relative;
+}
+  
+.fa-star-percentage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+  
+.fa-star {
+    color: rgb(253, 194, 1);
+}
+  
