@@ -183,5 +183,8 @@
         $(this).parent().find('.dropdown-content').slideToggle('fast');
     });
 
-
+    $(function(){
+        $("#header").load("header.html"); 
+        $("#footer").load("footer.html"); 
+    });
 })(jQuery);

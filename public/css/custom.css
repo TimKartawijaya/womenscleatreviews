@@ -129,7 +129,7 @@
     min-height: 100px;
     padding-left: 15px;
     padding-right: 15px;
-    background-repeat: no-repeat;s
+    background-repeat: no-repeat;
     background-position: center 0;
     background-size: cover;
     
@@ -186,3 +186,11 @@
     color: rgb(253, 194, 1);
 }
   
+
+.margin-auto{
+    margin:auto;
+}
+
+.justify-content{
+    justify-content: center;
+}

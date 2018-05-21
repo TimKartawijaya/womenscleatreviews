@@ -5,4 +5,7 @@ $(document).ready(function () {
         $(".show_hide").text(txt);
         $(this).next('.story-content').slideToggle(200);
     });
+
+   
 });
+
