@@ -1,4 +1,5 @@
 
+
 (function ($) {
     "use strict";
 
@@ -23,6 +24,10 @@
         overlayParentElement : 'html',
         transition: function(url){ window.location.href = url; }
     });
+
+    $("#header").load("header.html"); 
+    $("#footer").load("footer.html"); 
+    
     
     /*[ Back to top ]
     ===========================================================*/
@@ -111,35 +116,6 @@
         } 
 
     });
-    
-    /*[ Show menu mobile ]
-    ===========================================================*/
-    $('.btn-show-menu-mobile').on('click', function(){
-        $(this).toggleClass('is-active');
-        $('.wrap-side-menu').slideToggle();
-    });
-
-    var arrowMainMenu = $('.arrow-main-menu');
-
-    for(var i=0; i<arrowMainMenu.length; i++){
-        $(arrowMainMenu[i]).on('click', function(){
-            $(this).parent().find('.sub-menu').slideToggle();
-            $(this).toggleClass('turn-arrow');
-        })
-    }
-
-    $(window).resize(function(){
-        if($(window).width() >= 992){
-            if($('.wrap-side-menu').css('display') == 'block'){
-                $('.wrap-side-menu').css('display','none');
-                $('.btn-show-menu-mobile').toggleClass('is-active');
-            }
-            if($('.sub-menu').css('display') == 'block'){
-                $('.sub-menu').css('display','none');
-                $('.arrow-main-menu').removeClass('turn-arrow');
-            }
-        }
-    });
 
 
     /*[ remove top noti ]
@@ -147,31 +123,6 @@
     $('.btn-romove-top-noti').on('click', function(){
         $(this).parent().remove();
     })
-
-
-    /*[ Block2 button wishlist ]
-    ===========================================================*/
-    $('.block2-btn-addwishlist').on('click', function(e){
-        e.preventDefault();
-        $(this).addClass('block2-btn-towishlist');
-        $(this).removeClass('block2-btn-addwishlist');
-        $(this).off('click');
-    });
-
-    /*[ +/- num product ]
-    ===========================================================*/
-    $('.btn-num-product-down').on('click', function(e){
-        e.preventDefault();
-        var numProduct = Number($(this).next().val());
-        if(numProduct > 1) $(this).next().val(numProduct - 1);
-    });
-
-    $('.btn-num-product-up').on('click', function(e){
-        e.preventDefault();
-        var numProduct = Number($(this).prev().val());
-        $(this).prev().val(numProduct + 1);
-    });
-
 
     /*[ Show content Product detail ]
     ===========================================================*/
@@ -183,8 +134,5 @@
         $(this).parent().find('.dropdown-content').slideToggle('fast');
     });
 
-    $(function(){
-        $("#header").load("header.html"); 
-        $("#footer").load("footer.html"); 
-    });
+    
 })(jQuery);

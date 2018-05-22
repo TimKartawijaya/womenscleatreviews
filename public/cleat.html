@@ -30,9 +30,9 @@
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/noui/nouislider.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	<link rel="stylesheet" type="text/css" href="css/util.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.min.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.min.css">
 	<!--===============================================================================================-->
 </head>
 
@@ -58,6 +58,8 @@
 	<section class="bgwhite p-t-55 p-b-65">
 		<div class="container">
 			<div class="row">
+
+				<!-- Filters -->
 				<div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
 					<div class="leftbar p-r-20 p-r-0-sm sidebar-filter">
 						<!-- Filter Bar -->
@@ -77,8 +79,8 @@
 
 								<div class="s-text3 p-t-10 p-b-10">
 									Range: $
-									<span id="value-lower">0</span> - $
-									<span id="value-upper">200</span>
+									<span data-price="0" id="value-lower">0</span> - $
+									<span data-price="200" id="value-upper">200</span>
 								</div>
 							</div>
 						</div>
@@ -224,8 +226,9 @@
 					</div>
 				</div>
 
+				<!-- Product Listing -->
 				<div class="col-sm-6 col-md-8 col-lg-9 p-b-50">
-					<!--  -->
+					<!-- Sorting -->
 					<div class="flex-sb-m flex-w p-b-35">
 						<div class="flex-w">
 							<div class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
@@ -255,9 +258,11 @@
 						</span>
 					</div>
 
-					<!-- Product -->
-					<div class="row">
-						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
+					<!-- Actual Products -->
+					<div id="products" class="row">
+
+						<!-- Cleat #1 -->
+						<div id="cleat1" class="col-sm-12 col-md-6 col-lg-4 p-b-50">
 							<!-- Block2 -->
 							<div class="block2">
 								<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
@@ -280,7 +285,7 @@
 
 								<div class="block2-txt p-t-20">
 									<a href="cleats-detail.html" class="block2-name dis-block s-text3 p-b-5">
-										Cleat 1 
+										Cleat 1
 									</a>
 
 									<span class="block2-price m-text6 p-r-5">
@@ -290,11 +295,12 @@
 							</div>
 						</div>
 
-						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
+						<!-- Cleat #2 -->
+						<div id="cleat2" class="col-sm-12 col-md-6 col-lg-4 p-b-50">
 							<!-- Block2 -->
 							<div class="block2">
 								<div class="block2-img wrap-pic-w of-hidden pos-relative">
-									<img src="images/product/cleat1.jpg" alt="IMG-PRODUCT">
+									<img src="images/product/cleat2.jpg" alt="IMG-PRODUCT">
 
 									<div class="block2-overlay trans-0-4">
 										<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -305,7 +311,7 @@
 										<div class="block2-btn-addcart w-size1 trans-0-4">
 											<!-- Button -->
 											<a href="cleats-detail.html" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-													See Reviews
+												See Reviews
 											</a>
 										</div>
 									</div>
@@ -318,6 +324,74 @@
 
 									<span class="block2-price m-text6 p-r-5">
 										$92.50
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Cleat #3 -->
+						<div id="cleat3" class="col-sm-12 col-md-6 col-lg-4 p-b-50">
+							<!-- Block2 -->
+							<div class="block2">
+								<div class="block2-img wrap-pic-w of-hidden pos-relative">
+									<img src="images/product/cleat3.jpg" alt="IMG-PRODUCT">
+
+									<div class="block2-overlay trans-0-4">
+										<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+											<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+											<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+										</a>
+
+										<div class="block2-btn-addcart w-size1 trans-0-4">
+											<!-- Button -->
+											<a href="cleats-detail.html" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+												See Reviews
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="block2-txt p-t-20">
+									<a href="cleats-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										Cleat 3
+									</a>
+
+									<span class="block2-price m-text6 p-r-5">
+										$30.00
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Cleat #4 -->
+						<div id="cleat4" class="col-sm-12 col-md-6 col-lg-4 p-b-50">
+							<!-- Block2 -->
+							<div class="block2">
+								<div class="block2-img wrap-pic-w of-hidden pos-relative">
+									<img src="images/product/cleat4.jpg" alt="IMG-PRODUCT">
+
+									<div class="block2-overlay trans-0-4">
+										<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+											<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+											<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+										</a>
+
+										<div class="block2-btn-addcart w-size1 trans-0-4">
+											<!-- Button -->
+											<a href="cleats-detail.html" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+												See Reviews
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="block2-txt p-t-20">
+									<a href="cleats-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										Cleat 2
+									</a>
+
+									<span class="block2-price m-text6 p-r-5">
+										$150.00
 									</span>
 								</div>
 							</div>
@@ -352,8 +426,6 @@
 	<div id="dropDownSelect1"></div>
 	<div id="dropDownSelect2"></div>
 
-
-
 	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
 	<!--===============================================================================================-->
@@ -382,21 +454,44 @@
 	<script type="text/javascript" src="js/slick-custom.js"></script>
 	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/sweetalert/sweetalert.min.js"></script>
-	<script type="text/javascript">
-		$('.block2-btn-addwishlist').each(function () {
-			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
-			$(this).on('click', function () {
-				swal(nameProduct, "is added to wishlist !", "success");
-			});
-		});
-	</script>
 
 	<!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/noui/nouislider.min.js"></script>
 	<script type="text/javascript">
-		/*[ No ui ]
-	    ===========================================================*/
-		var filterBar = document.getElementById('filter-bar');
+	// Cleat objects
+		let cleat1 = {
+			price:75.00,
+			element:document.getElementById('cleat1'),
+			surface:'AG'
+		}
+
+		let cleat2 = {
+			price:92.50,
+			element:document.getElementById('cleat2'),
+			surface:'FG'
+		}
+
+		let cleat3 = {
+			price:30.00,
+			element:document.getElementById('cleat3'),
+			surface:'Ind'
+		}
+
+		let cleat4 = {
+			price:150.00,
+			element:document.getElementById('cleat4'),
+			surface:'AG'
+		}
+
+		let allCleats = [cleat1, cleat2, cleat3, cleat4];
+
+		let lowerLimit = 0;
+		let upperLimit = 200;
+
+		/*[ No ui Price Slider]
+			===========================================================*/
+		let filterBar = document.getElementById('filter-bar');
+		
 
 		noUiSlider.create(filterBar, {
 			start: [0, 200],
@@ -407,17 +502,45 @@
 			}
 		});
 
-		var skipValues = [
+		let skipValues = [
 			document.getElementById('value-lower'),
 			document.getElementById('value-upper')
 		];
 
+		//when range is changed
 		filterBar.noUiSlider.on('update', function (values, handle) {
-			skipValues[handle].innerHTML = Math.round(values[handle]);
+			let handleValue = Math.round(values[handle]);
+			skipValues[handle].innerHTML = handleValue;
+			if (handle === 0) {
+				lowerLimit = handleValue;
+
+			} else {
+				upperLimit = handleValue;
+			}
+
+			//find any cleats that not within the price and remove display and toggle the erest
+			for (i = 0; i < allCleats.length; i++){
+				let currCleat = allCleats[i];
+				//if cleat is within price, show
+				if (currCleat.price >= lowerLimit && currCleat.price <= upperLimit){
+					currCleat.element.style.display='block';
+				//else, hide
+				} else {
+					currCleat.element.style.display='none';
+				}
+			}
 		});
+
+		//filter by Price
+		
+		
+
+		
+
 	</script>
 	<!--===============================================================================================-->
-	<script src="js/main.js"></script>
+	<script src="js/main.min.js"></script>
+	<script src="js/catalog.js"></script>
 
 </body>
 

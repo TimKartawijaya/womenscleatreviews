@@ -13,7 +13,7 @@
                 <nav class="menu">
                     <ul class="main_menu">
                         <li>
-                            <a href="index.html" class="active1">Home</a>
+                            <a href="index.html">Home</a>
                         </li>
 
                         <li>
@@ -86,3 +86,32 @@
         </nav>
     </div>
 </header>
+
+<script>/*[ Show menu mobile ]
+    ===========================================================*/
+    $('.btn-show-menu-mobile').on('click', function(){
+        $(this).toggleClass('is-active');
+        $('.wrap-side-menu').slideToggle();
+    });
+
+    var arrowMainMenu = $('.arrow-main-menu');
+
+    for(var i=0; i<arrowMainMenu.length; i++){
+        $(arrowMainMenu[i]).on('click', function(){
+            $(this).parent().find('.sub-menu').slideToggle();
+            $(this).toggleClass('turn-arrow');
+        })
+    }
+
+    $(window).resize(function(){
+        if($(window).width() >= 992){
+            if($('.wrap-side-menu').css('display') == 'block'){
+                $('.wrap-side-menu').css('display','none');
+                $('.btn-show-menu-mobile').toggleClass('is-active');
+            }
+            if($('.sub-menu').css('display') == 'block'){
+                $('.sub-menu').css('display','none');
+                $('.arrow-main-menu').removeClass('turn-arrow');
+            }
+        }
+    });</script>
